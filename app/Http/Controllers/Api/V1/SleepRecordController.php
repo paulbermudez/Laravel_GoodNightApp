@@ -14,7 +14,7 @@ class SleepRecordController extends Controller
      */
     public function index()
     {
-        //
+        return SleepRecord::all();
     }
 
     /**
