@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('sleep_records', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->dateTime('sleep_start');
+            $table->dateTime('sleep_end')->nullable();
+            $table->dateTime('duration')->nullable();
             $table->timestamps();
         });
     }
