@@ -19,7 +19,7 @@ class SleepRecordFactory extends Factory
     {
         $sleep_start = $this->faker->dateTimeThisMonth();
         $sleep_end = $this->faker->dateTimeBetween($sleep_start, '+24 hours');
-        $duration = $sleep_end->getTimestamp() - $sleep_start->getTimestamp();
+        $duration = $sleep_end->diff($sleep_start)->format('%H:%I:%S');
         return [
             'user_id' => User::factory(),
             'sleep_start' => $sleep_start,
