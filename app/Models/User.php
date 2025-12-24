@@ -47,7 +47,7 @@ class User extends Authenticatable
         ];
     }
 
-    public function sleepRecord() {
+    public function sleepRecords() {
         return $this->hasMany(SleepRecord::class);
     }
 }
