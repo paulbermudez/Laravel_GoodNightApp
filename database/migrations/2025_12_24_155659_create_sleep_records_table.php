@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->dateTime('sleep_start');
             $table->dateTime('sleep_end')->nullable();
-            $table->dateTime('duration')->nullable();
+            $table->integer('duration')->nullable();
             $table->timestamps();
         });
     }
