@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Api\V1;
 
-use App\Models\SleepRecord;
-use App\Http\Requests\StoreSleepRecordRequest;
-use App\Http\Requests\UpdateSleepRecordRequest;
+use App\Models\User;
+use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\Http\Controllers\Controller;
 
-class SleepRecordController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +28,7 @@ class SleepRecordController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSleepRecordRequest $request)
+    public function store(StoreUserRequest $request)
     {
         //
     }
@@ -36,7 +36,7 @@ class SleepRecordController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SleepRecord $sleepRecord)
+    public function show(User $user)
     {
         //
     }
@@ -44,7 +44,7 @@ class SleepRecordController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SleepRecord $sleepRecord)
+    public function edit(User $user)
     {
         //
     }
@@ -52,7 +52,7 @@ class SleepRecordController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSleepRecordRequest $request, SleepRecord $sleepRecord)
+    public function update(UpdateUserRequest $request, User $user)
     {
         //
     }
@@ -60,7 +60,7 @@ class SleepRecordController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SleepRecord $sleepRecord)
+    public function destroy(User $user)
     {
         //
     }
