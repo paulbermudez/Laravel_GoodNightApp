@@ -6,6 +6,8 @@ use App\Models\SleepRecord;
 use App\Http\Requests\StoreSleepRecordRequest;
 use App\Http\Requests\UpdateSleepRecordRequest;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\V1\SleepRecordResource;
+use App\Http\Resources\V1\SleepRecordCollection;
 
 class SleepRecordController extends Controller
 {
@@ -14,7 +16,7 @@ class SleepRecordController extends Controller
      */
     public function index()
     {
-        return SleepRecord::all();
+        return new SleepRecordCollection(SleepRecord::paginate());
     }
 
     /**
@@ -38,7 +40,7 @@ class SleepRecordController extends Controller
      */
     public function show(SleepRecord $sleepRecord)
     {
-        //
+        return new SleepRecordResource($sleepRecord);
     }
 
     /**
