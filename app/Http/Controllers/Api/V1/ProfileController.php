@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Profile;
 use App\Http\Requests\StoreProfileRequest;
 use App\Http\Requests\UpdateProfileRequest;
+use App\Http\Controllers\Controller;
 
 class ProfileController extends Controller
 {

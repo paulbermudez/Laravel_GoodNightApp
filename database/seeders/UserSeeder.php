@@ -15,21 +15,25 @@ class UserSeeder extends Seeder
     {
         User::factory()
             ->count(25)
+            ->hasProfile()
             ->hasSleepRecords(10)
             ->create();
 
         User::factory()
             ->count(100)
+            ->hasProfile()
             ->hasSleepRecords(5)
             ->create();
 
         User::factory()
             ->count(100)
+            ->hasProfile()
             ->hasSleepRecords(3)
             ->create();
 
         User::factory()
             ->count(5)
+            ->hasProfile()
             ->create();
     }
 }
